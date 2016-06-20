@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     jsonapi_resources :cars
+    jsonapi_resources :sellers
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
