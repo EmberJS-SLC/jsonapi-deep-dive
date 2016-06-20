@@ -1,0 +1,35 @@
+<form {{action "save" on="submit"}}>
+  <div>
+    <label>
+      Year
+      {{input type="text" value=model.year}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Make
+      {{input type="text" value=model.make}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Model
+      {{input type="text" value=model.model}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Miles
+      {{input type="text" value=model.miles}}
+    </label>
+  </div>
+  <div>
+    <label>
+      Description
+      {{input type="text" value=model.description}}
+    </label>
+  </div>
+  <div>
+    <input type="submit" value="Save">
+  </div>
+</form>

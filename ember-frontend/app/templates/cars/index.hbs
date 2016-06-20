@@ -1,0 +1,66 @@
+<h1>Cars list</h1>
+
+<p>
+  {{link-to "New Car" "cars.new" }}
+</p>
+
+{{#if model.length}}
+  <table>
+    <thead>
+      <tr>
+        <th>
+          Year
+        </th>
+        <th>
+          Make
+        </th>
+        <th>
+          Model
+        </th>
+        <th>
+          Miles
+        </th>
+        <th>
+          Description
+        </th>
+        <th colspan="3">
+          Actions
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each model as |car|}}
+        <tr>
+          <td>
+            {{car.year}}
+          </td>
+          <td>
+            {{car.make}}
+          </td>
+          <td>
+            {{car.model}}
+          </td>
+          <td>
+            {{car.miles}}
+          </td>
+          <td>
+            {{car.description}}
+          </td>
+          <td>
+            {{link-to "Edit" "cars.edit" car}}
+          </td>
+          <td>
+            {{link-to "Show" "cars.show" car}}
+          </td>
+          <td>
+            <a href="#" {{action "remove" car}}>Remove</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p id="blankslate">
+    No Cars found
+  </p>
+{{/if}}
