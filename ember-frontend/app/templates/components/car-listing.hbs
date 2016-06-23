@@ -1,10 +1,19 @@
-<div class="image">
+<div class="blurring dimmable image">
+  <div class="ui dimmer">
+    <div class="content">
+      <div class="center">
+        {{#if showSeller}}
+          Sold by: {{car.seller.name}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
   <img src={{car.photoUrl}} alt="photo">
 </div>
 <div class="content">
-  <a class="header">{{car.year}}</a>
+  <a class="header">{{car.year}} {{car.make}} {{car.model}}</a>
   <div class="meta">
-    <span>{{car.make}} {{car.make}}</span>
+    <span>{{car.miles}} miles</span>
   </div>
   <div class="description">
     {{car.description}}

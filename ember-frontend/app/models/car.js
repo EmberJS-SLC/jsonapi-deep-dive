@@ -9,5 +9,5 @@ export default Model.extend({
   miles: attr('number'),
   photoUrl: attr('string'),
   description: attr('string'),
-  seller: belongsTo('seller')
+  seller: belongsTo('seller', {async: true})
 });
