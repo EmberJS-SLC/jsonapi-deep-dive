@@ -1,6 +1,6 @@
 import Model from 'ember-data/model';
 import attr from 'ember-data/attr';
-// import { belongsTo, hasMany } from 'ember-data/relationships';
+import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   year: attr('number'),
@@ -8,5 +8,6 @@ export default Model.extend({
   model: attr('string'),
   miles: attr('number'),
   photoUrl: attr('string'),
-  description: attr('string')
+  description: attr('string'),
+  seller: belongsTo('seller')
 });
