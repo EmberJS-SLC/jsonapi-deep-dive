@@ -7,5 +7,6 @@ export default Model.extend({
   make: attr('string'),
   model: attr('string'),
   miles: attr('number'),
+  photoUrl: attr('string'),
   description: attr('string')
 });
